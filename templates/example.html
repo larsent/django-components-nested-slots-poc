@@ -1,0 +1,20 @@
+{% slot 'wrapper' %}
+<div style="background: red; padding:10px">
+  Wrapper Default 
+  {% slot 'parent1' %}
+    <div style="background: green; margin: 10px; padding: 5px">
+      Parent1 Default
+      {% slot 'child1' %}
+        <div style="background: black; color: white; padding:5px; margin:10px">
+          Child 1 Default
+        </div>
+      {% endslot %}
+    </div>
+  {% endslot %}
+  {% slot 'parent2' %}
+    <div style="background: pink; margin: 10px; padding: 5px">
+      Parent2 Default
+    </div>
+  {% endslot %}
+</div>
+{% endslot %}
