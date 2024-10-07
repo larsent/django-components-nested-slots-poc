@@ -1,0 +1,12 @@
+{% extends 'base.html' %} {% block content %}
+
+<h2>Nothing Filled</h2>
+{% component 'flat_example' %} {% endcomponent %} 
+
+<h2>Slot Filled</h2>
+{% component 'flat_example' %} 
+{% fill 'parent' %}
+<div style="background: blue; color:white; padding:10px">Slot Filled</div>
+{% endfill %} 
+{% endcomponent %} 
+{% endblock%}

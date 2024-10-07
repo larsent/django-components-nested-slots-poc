@@ -1,0 +1,41 @@
+{% extends 'base.html' %} 
+{% block content %} 
+
+<h2>Nothing Filled</h2>
+{% component 'example' %} 
+{% endcomponent %} 
+
+<h2>Override Wrapper</h2>
+{% component 'example' %} 
+    {% fill 'wrapper' %}
+    <div style="background: blue; color:white; padding:10px">
+        Entire Wrapper Replaced
+    </div>
+    {% endfill %}
+{% endcomponent %} 
+
+
+<h2>Override Parent1</h2>
+{% component 'example' %} 
+    {% fill 'parent1' %}
+    <div style="background: blue; color:white; padding:10px">
+       Parent1 Replaced
+    </div>
+    {% endfill %}
+{% endcomponent %} 
+
+
+
+<h2>Override Child1</h2>
+{% component 'example' %} 
+    {% fill 'child1' %}
+    <div style="background: blue; color:white; padding:10px">
+       Child1 Replaced
+    </div>
+    {% endfill %}
+{% endcomponent %} 
+
+
+
+{% endblock%}
+
